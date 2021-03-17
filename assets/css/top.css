@@ -1,0 +1,383 @@
+@charset "UTF-8";
+
+
+/**
+ *
+ * outline
+ * main
+ * footer
+ *
+ * タブレット版
+ * PC版
+ *
+ **/
+
+
+/********************************************************
+ * outline
+ ********************************************************/
+
+/* h2 英語 装飾 */
+h2::after {
+	display: block;
+	margin: 0 auto;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.strengths__ttl::after {
+    content: "Strengths";
+}
+.product__ttl::after {
+    content: "Product";
+}
+.news__ttl::after {
+    content: "News";
+}
+
+/* h3 下線 修飾 */
+.strengths h3 {
+    text-align: center;
+}
+.strengths h3::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: #888;
+    border-radius: 10px;
+}
+
+
+/********************************************************
+ * main
+ ********************************************************/
+
+.main {
+    padding-top: 0;
+}
+
+/* メインビジュアル */
+.mainvsl {
+    position: relative;
+}
+.copy {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    padding-left: 10px;
+    
+    width: 100%;
+
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+.copy__ttl {
+    font-size: 5.1rem;
+    line-height: 1.2;
+}
+.copy__txt {
+    line-height: 2.0;
+    width: 88%;
+}
+
+.slider {
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* strengths */
+.strengths h2 {
+    margin-top: 150px;
+}
+.h2__ttl span {
+    font-size: 7.2rem;
+    letter-spacing: .05em;
+    color: #a60a0a;
+}
+.strengths__list li + li {
+    margin-top: 80px;
+}
+.strengths__list__item {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.strengths__list__item p {
+    line-height: 2.0;
+}
+.strengths__list__item h3 span {
+    padding-left: 8px;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+
+/* product */
+.product ul {
+    width: 100%;
+}
+.product .wrap {
+    width: auto;
+}
+.product__list li + li {
+    margin-top: 0;
+}
+.product__h3__wrap {
+    position: relative;
+}
+.product__linkTxt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    z-index: 9;
+
+    min-width: 300px;
+    min-height: 300px;
+    background-color: rgba(39,42,43,.6); 
+
+    text-align: center;
+}
+.product__list__item {
+    overflow: hidden;
+}
+.product__list__item a {
+    color: #fff;
+}
+.product__list__item a img {
+    transition: .3s ease-out;
+}
+.product__list__item a:hover img {
+    transform: scale(1.2, 1.2);
+    transition: .3s ease-out;
+}
+
+.view__more span::after {
+    content: "\03e";
+    padding-left: 18px; 
+}
+
+
+/* contact */
+.contact__wrap section + section {
+    margin-top: 0;
+}
+.contact h2 {
+    margin-top: 0;
+    font-size: 2.4rem;
+}
+.contact h2 + * {
+    margin-top: 0;
+}
+.contact__wrap {
+    margin-top: 200px;
+    text-align: center;
+}
+.contact {
+    padding: 80px 0;
+}
+
+
+/* 電話 */
+.cTel {
+    background-color: #272a2b;
+    color: #eee;
+}
+.cTel .telNum {
+    margin-top: 40px;
+}
+.telNum .first {
+	font-size: 2.4rem;
+	font-weight: 500;
+	padding-right: .25em;
+}
+.telNum .second {
+    font-size: 3.6rem;
+    font-weight: 700;
+    padding-right: .1em;
+}
+.telNum .third {
+    font-size: 1.8rem;
+}
+
+.cTel .hours {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+
+/* フォーム */
+.cForm {
+    background-color: #999;
+    color: #272a2b;
+}
+.cForm h2 + p {
+    margin-top: 24px;
+}
+.cForm .btn {
+    margin-top: 40px;
+    width: 95%;
+    max-width: initial;;
+
+    border-radius: 36px;
+    font-size: 2.4rem;
+}
+
+
+/********************************************************
+ * footer
+ ********************************************************/
+.footer {
+    margin-top: 0;
+}
+
+
+
+/********************************************************
+ * タブレット版
+ ********************************************************/
+ @media screen and (min-width: 768px) {
+
+
+    /********************************************************
+     * main
+     ********************************************************/
+
+    /* news */
+    .news__list__item {
+        flex-wrap: nowrap;
+    }
+    .news__list__item a {
+        display: inline-block;
+        padding: 0;
+        width: 65%;
+    }
+
+
+    /* contact */
+    .cForm .btn {
+        max-width: 400px;
+
+    }
+}
+
+
+/********************************************************
+ * PC版
+ ********************************************************/
+ @media screen and (min-width: 1024px) {
+
+
+    /********************************************************
+     * outline
+     ********************************************************/
+
+    /* コンテンツ余白 */
+	h2 {
+        margin-top: 150px;
+	}
+    h2 span {
+        line-height: 1.0;
+    }
+    section + section {
+        margin-top: 300px;
+    }
+	h3 {
+        margin-top: 30px;
+	}
+
+
+    /********************************************************
+     * main
+     ********************************************************/
+
+    /* キャッチコピー */
+    .copy {
+        top: 0;
+        padding-top: 20%;
+        padding-left: 13%;
+    }
+    .copy__txt {
+        max-width: 500px;
+    }
+
+    /* スライダー */
+    .slider div {
+        background-position: center left;
+    }
+    .slider div.mainvsl__bg01 {
+        background-image: url("../img/slider/top__mainvsl__img01.jpg");
+    }
+    .slider div.mainvsl__bg02 {
+        background-image: url("../img/slider/top__mainvsl__img02.jpg");
+    }
+    .slider div.mainvsl__bg03 {
+        background-image: url("../img/slider/top__mainvsl__img03.jpg");
+    }
+
+
+    /* strengths */
+    .strengths__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .strengths__list li + li {
+        margin-top: 0;
+    }
+    .strengths__list__item {
+        max-width: 310px;
+    }
+
+
+    /* product */
+    .product__list {
+        display: flex;
+        flex-direction: row;
+    }
+    .product__list__item {
+        width: calc(100%/3);
+    }
+
+    /* news */
+    .news__list__item time{
+        margin-right: 40px;
+    }
+    .news__list__item a {
+        width: 76%;
+    }
+    .genre {
+        margin-right: 40px;
+    }
+    .news__list li + li {
+        margin-top: 40px;
+    }
+
+
+    /* contact */
+    .contact__wrap {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact {
+        width: 50%;
+    }
+    .cTel .telNum {
+        margin-top: 85px;
+    }
+}

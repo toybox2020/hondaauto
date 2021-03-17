@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/********************************************************
+ * News(TOPページとお知らせページ共通)
+ ********************************************************/
+
+/* お知らせ 一覧 */
+.news__list li + li {
+    margin-top: 24px;
+}
+
+.news__list__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.news__list__item .news__txt {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 90%;
+
+    color: #413c3b;
+    text-align: justify;
+}
+.news__list__item time{
+    margin-right: 22px;
+}
+.indention {
+    display: inline;
+}
+
+
+/* お知らせ 種別 */
+.genre {
+    display: inline-block;
+    max-height: 20px;
+    padding: 2px 13px;
+
+    border-radius: 3px;
+    background-color: #717171;
+
+    font-size: 1.2rem;
+    color: #fff;
+}
+.gNews {
+    background-color: #a60a0a;
+
+}
+.gRecruit {
+    background-color: #272a2b;
+}
+
+
+/********************************************************
+ * PC版
+ ********************************************************/
+
+@media screen and (min-width: 1024px) {
+
+    .news__list__item {
+        flex-direction: row;
+    }
+    .news__list__item .news__txt {
+        padding-top: 0;
+        width: 70%;
+    }
+
+    .genre {
+        margin-right: 80px;
+    }
+}

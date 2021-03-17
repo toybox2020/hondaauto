@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/********************************************************
+ * お問い合わせ ページ
+ ********************************************************/
+
+
+/********************************************************
+ * outline
+ ********************************************************/
+
+h2 {
+	font-size: 3.5rem;
+}
+dl {
+	width: 100%;
+}
+/* 【Submitボタン】 iOSでのデフォルトスタイルをリセット */
+
+input[type="submit"],
+input[type="button"] {
+	-webkit-appearance: none;
+  border-radius: 0;
+}
+
+
+/********************************************************
+ * main
+ ********************************************************/
+
+/* 電話でのお問い合わせ */
+
+.telNum__wrap {
+	margin: 0 auto;
+	margin-top: 80px; 
+
+	padding: 50px 20px;
+	max-width: 500px;
+	border: 1px solid #000;
+
+	text-align: center;
+}
+.telNum__wrap h2 {
+	font-size: 2.4rem;
+}
+
+
+/* フォームからのお問い合わせ */
+
+.form__wrap {
+	margin: 0 auto;
+	max-width: 800px;
+}
+.form__wrap dl {
+	margin-top: 50px; 
+}
+.form__txt {
+	margin: 0 auto;
+	margin-top: 80px; 
+	max-width: 800px;
+}
+.form__topicPath {
+	margin: 0 auto;
+	margin-top: 50px;
+	max-width: 800px;
+}
+
+dl input, textarea {
+	width: 100%;
+}
+textarea {
+	resize: none;
+	height: 300px;
+}
+
+.required {
+	padding: 2px 5px;
+	margin-left: 10px;
+
+	border-radius: 5px;
+	font-size: 1.2rem;
+
+	color: #fff;
+	background-color: #a60a0a;
+}
+
+.pp {	/* プライバシーポリシー */
+	margin-top: 30px;
+
+	font-weight: 700;
+	text-align: center;
+}
+.pp label {
+	margin-left: 10px;
+}
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+/* submitボタン */
+.submit__wrap {
+	text-align: center;
+}
+.btn {
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 20px 0;
+
+	width: 100%;
+	max-width: 300px;
+
+	color: #fff;
+	background-color: #a60a0a;
+	border-style: none;
+
+	transition: .3s ease-out;
+}
+.btn:hover {
+	opacity: .7;
+}
+
+
+/* フォーム　パンくずリスト */
+.form__topicPath {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	padding: 20px 0;
+	color: #999;
+	background-color: #a60a0a;
+}
+.form__topicPath li + li {
+	margin-top: 0;
+}
+.form__topicPath li:nth-child(odd) {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+.form__topicPath li:nth-child(even) {
+	background-color: transparent;
+}
+
+.form__topicPath li:first-child {
+	color: #fff;
+}

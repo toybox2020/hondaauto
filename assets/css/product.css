@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/********************************************************
+ * 事業案内 ページ
+ ********************************************************/
+
+/* outline */
+#product ul, #product li + li {
+	margin-top: 0;
+}
+.product__container {
+	display: flex;
+	flex-direction: column-reverse;
+}
+#product h2 {
+	margin-top: 200px;
+}
+#product h3 {
+	margin-top: 8px;
+	color: #a60a0a;
+}
+#product ul {
+  width: 100%;
+}
+
+/* H3タイトル */
+.h3__ttl {
+	margin-top: 30px;
+}
+.h3__ttl{
+	font-weight: 700;
+}
+/* 特長 文章 */
+.product__txt {
+	margin-top: 20px;
+}
+
+
+/* 背景画像 */
+.product__container .left img {
+	border-radius: 0 20% 0 0;
+}
+.product__container .right img {
+	border-radius: 20% 0 0 0;
+}
+
+
+/* 自動車用パーツ */
+#autoParts h3 {
+	color: #413c3b;
+}
+#autoParts .product__txt {
+	margin-top: 30px;
+}
+.parts__list {
+	margin-top: 30px;
+}
+.parts__list li {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+
+
+/********************************************************
+ * タブレット版
+ ********************************************************/
+ @media screen and (min-width: 768px) {
+
+
+	.h3__ttl {
+	  margin-top: 0;
+	}
+ 	.product__container {
+ 		position: relative;
+ 	}
+ 	.product__feature {
+ 		position: absolute;
+ 		padding: 20px;
+ 		max-width: 400px;
+ 		background-color: rgba(255,255,255,0.6);
+ 		top: 100px;
+ 	}
+
+
+ 	/* 特長説明文 */
+ 	.txt__right {
+ 		left: 350px;
+ 	}
+ 	.txt__left {
+ 		left: 50px;
+ 	}
+
+
+ 	/* 背景画像 */
+ 	.product__img {
+ 		max-width: 500px;
+ 	}
+	.product__container .right {
+		/* 画像右寄せ */
+		margin: 0 0 0 auto;
+	}
+
+
+	/* 自動車用パーツ */
+	#autoParts .product__txt {
+	  margin-top: 0;
+	}
+	.parts__list ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.parts__list li {
+		margin-top: 0;
+		margin-left: 15px;
+	}
+
+}
+
+
+/********************************************************
+ * PC版
+ ********************************************************/
+@media screen and (min-width: 1024px) {
+
+ 	.product__feature {
+ 		max-width: 600px;
+ 		top: 300px;
+ 	}
+
+ 	/* 特長説明文 */
+ 	.txt__right {
+ 		left: 700px;
+ 	}
+
+ 	/* 背景画像 */
+ 	.product__img {
+ 		max-width: 800px;
+ 	}
+}
+@media screen and (min-width: 1300px) {
+
+	.product__feature {
+		max-width: 600px;
+	}
+	
+	/* 特長説明文 */
+	.txt__right {
+		left: 1050px;
+	}
+	.txt__left {
+		left: 250px;
+	}
+
+	/* 背景画像 */
+	.product__img {
+		max-width: 1000px;
+	}
+}

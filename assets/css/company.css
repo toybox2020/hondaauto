@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+
+/********************************************************
+ * 会社概要 ページ
+ ********************************************************/
+
+ /* outline */
+ .overview ul, .history ul {
+ 	margin-top: 0;
+ }
+
+
+/* 代表メッセージ */
+.ceoImage {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.ceo__msg .msg {
+	margin-top: 30px;
+	font-size: 3.2rem;
+	font-weight: 700;
+}
+.ceo__msg p + p {
+	margin-top: 0;
+}
+.ceoName {
+	padding-top: 24px;
+}
+.jpName {
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+.alphabet {
+	margin-left: 10px;
+}
+.position {
+	padding-top: 8px;
+	font-size: 1.4rem;
+}
+
+.greeting__txt {
+	margin-top: 50px;
+	width: 85%;
+}
+.greeting__copy {
+	font-size: 2.2rem;
+	font-weight: 700;
+	color: #a60a0a;
+}
+
+/* SDGs 取り組み */
+.sdgs__list {
+	margin-top: 50px;
+}
+.sdgs__list__item {
+	position: relative;
+	margin-top: 450px;
+}
+.sdgs__list li:first-child {
+	margin-top: 0;
+}
+.sdgs__list__item h3 {
+	margin-top: 30px;
+	color: #a60a0a;
+	text-align: center;
+}
+.sdgs__num {
+	padding: 10px;
+	margin-right: 10px;
+	color: #fff;
+	background-color: #a60a0a;
+}
+.sdgs__wrap {
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+
+  margin-top: 250px;
+  padding: 0 20px;
+	width: 330px;
+	background-color: #fff;
+}
+.sdgs__wrap h3 + * {
+	margin-top: 30px;
+}
+.overview {
+	margin-top: 500px;
+}
+
+
+/********************************************************
+ * タブレット版
+ ********************************************************/
+@media screen and (min-width: 768px) {
+
+	/* 代表メッセージ */
+	.greeting__txt {
+		width: 60%;
+	}
+	.ceoImage {
+		position: relative;
+	}
+	.ceo__msg {
+		position: absolute;
+		top: 25%;
+		left: 8%;
+	}
+
+	/* SDGs 取り組み */
+	.sdgs__list__item {
+		margin-top: 300px;
+	}
+	.sdgs__wrap {
+		width: 700px;
+	}
+
+	/* 企業情報 */
+	.overview {
+		margin-top: 400px;
+	}
+}
+
+
+/********************************************************
+ * PC版
+ ********************************************************/
+ 
+@media screen and (min-width: 1024px) {
+
+	/* 代表メッセージ */
+	.ceo__msg .msg {
+		font-size: 3.6rem;
+	}
+	.ceo__msg {
+		position: absolute;
+		top: 25%;
+		left: 15%;
+	}
+
+	/* SDGs 取り組み */
+	.sdgs__list__item, .sdgs__wrap {
+		position: static;
+	}
+	.sdgs__wrap {
+		top: auto;
+		left: auto;
+		transform: none;
+		margin-top: 0;
+		margin-left: 10px;
+		margin-right: 10px;
+		width: auto;
+	}
+	.sdgs__wrap h3 {
+		text-align: left;
+		margin-top: 10px;
+	}
+	.sdgs__wrap p + p {
+		margin-top: 18px;
+	}
+	.sdgs__list {
+		margin: 0 auto;
+		max-width: 1000px;
+		
+		display: flex;
+		flex-direction: column;
+
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.sdgs__list__item {
+		display: flex;
+		flex-direction: row-reverse;
+
+		margin-top: 50px;
+	}
+	.sdgs__list__item:nth-child(even) {
+		flex-direction: row;
+	}
+	.sdgs__list li:first-child {
+		margin-top: 50px;
+	}
+	.sdgs__list__item img {
+		max-width: 400px;
+		max-height: 300px;
+		object-fit: cover;
+	}
+
+	/* 概要 */
+	.overview {
+		margin-top: 0;
+	}
+}
