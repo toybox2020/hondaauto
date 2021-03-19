@@ -139,7 +139,7 @@
  		max-width: 800px;
  	}
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1440px) {
 
 	.product__feature {
 		max-width: 600px;
